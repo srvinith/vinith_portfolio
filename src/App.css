@@ -617,23 +617,23 @@ h6 {
 
 @keyframes box-ani {
   0% {
-    transform: translateZ(15px);
+    transform: skewX(2deg);
   }
 
   25% {
-    transform: translateZ(0px);
+    transform: skewX(0deg);
   }
 
   50% {
-    transform: translateZ(-15px);
+    transform: skewX(-2deg);
   }
 
   75% {
-    transform: translateZ(0px);
+    transform: skewX(0deg);
   }
 
   100% {
-    transform: translateZ(0px);
+    transform: skewX(2deg);
   }
 }
 
