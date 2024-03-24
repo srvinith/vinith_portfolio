@@ -2,7 +2,7 @@ import React,{useState,useEffect} from 'react'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import Resume from '../Assets/resume/resume_.pdf'
+// import Resume from '../Assets/resume/resume_.pdf'
 
 
 const Header = () => {
@@ -45,9 +45,8 @@ const Header = () => {
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
-            className="me-auto my-2 mx-4 my-lg-0"
-            style={{ maxHeight: '100px' }}
-            navbarScroll
+            className="me-auto my-2 mx-4 my-lg-0 nav-mob-slide"
+            navbarScroll 
           >
             <Nav.Link  className={click ? "nav-links active" : "nav-links"} onClick={closeMenu} href="/" activeClassName="active">Home</Nav.Link>
             <Nav.Link className={click ? "nav-links active" : "nav-links"} onClick={closeMenu} href="#about">About Me</Nav.Link>
@@ -57,7 +56,7 @@ const Header = () => {
           </Nav>
           
         </Navbar.Collapse>
-        <a className='resume-btn' href={Resume} download>Resume</a>
+        <a className='resume-btn' href="https://drive.google.com/file/d/1zH1M1VfRbA4y6fapbc24PYw4uliK8_Zx/view?usp=drivesdk" download target='_blank'>Resume</a>
       </Container>
     </Navbar>
 

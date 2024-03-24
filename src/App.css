@@ -910,15 +910,15 @@ footer {
 
 /* ================responsive============= */
 
-@media screen and (max-width:1000px) {
+@media screen and (min-width: 320px) and (max-width: 480px){
   .logo {
     display: none;
   }
 
   .resume-btn,
   .resume-btn::after {
-    padding: 7.999px 30.852px 17.191px 30px;
-    font-size: 18px;
+    padding: 3px 10px;
+    font-size: 14px;
   }
 
   #home {
@@ -931,10 +931,12 @@ footer {
   }
 
   .mob-name-svg {
-    width: 100px;
+    width: 80px;
   }
 
-
+.main-mob-con h3{
+  font-size: 20px;
+}
 
   .name-mob {
     position: relative;
@@ -943,6 +945,7 @@ footer {
   .name-mob img {
     position: absolute;
     object-fit: cover;
+    top: 0px;
   }
 
   .main-p {
@@ -954,9 +957,9 @@ footer {
 
   .mini-monitor img {
     object-fit: cover;
-    width: 40px;
-    height: 40px;
-    margin-left: 20px;
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
   }
 
   .sec-titl h2 {
@@ -975,8 +978,8 @@ footer {
     height: 4px;
     border-radius: 100%;
     background-color: #000;
-    top: 90%;
-    left: 60%;
+    top: 80%;
+    left: 59%;
     transform: translate(-50%, -50%);
   }
 
@@ -989,7 +992,7 @@ footer {
   }
 
   .about-text {
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
     font-size: 11px;
     font-style: normal;
@@ -998,9 +1001,9 @@ footer {
   }
 
   .main-project-con {
-    height: 80vh;
+    height: 90vh;
     position: sticky;
-    top: 100px;
+    top: 10px;
   }
 
   .work-desc {
@@ -1026,7 +1029,7 @@ footer {
     border-radius: 27.5px;
     border: 1px solid #F6BEFF;
     background: rgba(246, 190, 255, 0.30);
-    padding: 5px 10px;
+    padding: 5px 5px;
   }
 
   .looping-content span img {
@@ -1075,8 +1078,152 @@ footer {
     margin: 20px 0px;
     display: flex;
     align-items: center;
-    width: 70%;
+    width: 80%;
     justify-content: space-around;
+    white-space: none;
+  }
+
+  .linked img,
+  .mail img,
+  .github img {
+    width: 30px;
+  }
+
+  .linked span,
+  .mail span,
+  .github span {
+    font-size: 18px;
+  }
+
+  .bellow-line {
+    font-family: axioz;
+    font-size: 20px;
+  }
+
+  .bellow-line-imgs {
+    width: 90px !important;
+    height: 90px !important;
+    object-fit: cover;
+  }
+
+  .footer-line {
+    font-size: 16px;
+    padding: 10px 20px;
+    font-size: 22px;
+    font-weight: 400;
+  }
+
+  .footer-line p {
+    font-size: 12px;
+  }
+
+ 
+ 
+
+  body::after,
+  body::before {
+    height: 500vh;
+  }
+
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px){
+  .logo {
+    display: none;
+  }
+
+  .resume-btn,
+  .resume-btn::after {
+    padding: 5px 10px;
+    font-size: 16px;
+  }
+
+  #home {
+    display: none;
+  }
+
+  .mobile-hero {
+    display: block;
+    margin-top: 100px;
+  }
+
+  .mob-name-svg {
+    width: 80px;
+  }
+
+.main-mob-con h3{
+  font-size: 20px;
+}
+
+  .name-mob {
+    position: relative;
+  }
+
+  .name-mob img {
+    position: absolute;
+    object-fit: cover;
+    top: 0px;
+  }
+
+  
+  .looping-content span img {
+    padding: 0px 20px;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+  }
+
+  .looping-content span {
+    font-size: 20px;
+  }
+
+  .main-p {
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 168.624%;
+  }
+
+  .mini-monitor img {
+    object-fit: cover;
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+  }
+
+  .mob-eye {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    background-color: #000;
+    top: 90%;
+    left: 59%;
+    transform: translate(-50%, -50%);
+  }
+
+  .eyess {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  
+  .social-link {
+    flex-direction: column;
+  }
+
+  .linked,
+  .mail,
+  .github {
+    margin: 20px 0px;
+    display: flex;
+    align-items: center;
+    width: 80%;
+    justify-content: space-around;
+    white-space: none;
   }
 
   .linked img,
@@ -1122,7 +1269,16 @@ footer {
     height: 500vh;
   }
 
+
 }
+
+@media screen and (min-width: 769px) and (max-width: 1024px){
+
+}
+
+
+
+
 
 /* =====smoke wrapper */
 

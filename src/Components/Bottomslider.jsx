@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../Assets/Css/Torquee.css'
+import '../App.css'
 import Tag from '../Assets/Images/tag.svg'
 
 const BottomSlider = () => {
