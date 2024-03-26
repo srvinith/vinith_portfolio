@@ -1272,8 +1272,61 @@ footer {
 
 }
 
-@media screen and (min-width: 769px) and (max-width: 1024px){
-
+@media screen and (min-width: 1025px) and (max-width: 1200px){
+  .inner-con {
+    width: 10%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    
+  }
+  
+  .inner-con h3 {
+    color: #FFF;
+    text-align: center;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+  }
+  
+  .inner-con h3 img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+  }
+  
+  .inner-con p {
+    color: #FFF;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 168.624%;
+    /* 42.156px */
+    font-variant: small-caps;
+  }
+  
+  .inner-con span {
+    color: #F6BEFF;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    position: relative;
+  }
+  
+  .inner-con span img {
+    content: '';
+    position: absolute;
+    /* background-image: url(./Assets/Images/vinith-svg.png); */
+    width: fit-content;
+    background-size: cover;
+    background-position: calc();
+    background-repeat: no-repeat;
+    height: 100%;
+  }
 }
 
 
@@ -1315,7 +1368,7 @@ footer {
 .smoke,
 .smoke2,
 .smoke3 {
-  filter: blur(10px);
+  /* filter: blur(10px) ; */
   transform-origin: 50% 50%;
 }
 
@@ -1361,7 +1414,7 @@ footer {
   }
 
   100% {
-    filter: blur(7px);
+    filter: blur(3px);
     transform: translateY(-40px) scale(-1, 1.2);
     opacity: 0;
   }
@@ -1393,7 +1446,7 @@ footer {
   }
 
   100% {
-    filter: blur(7px);
+    filter: blur(3px);
     transform: translateY(-40px) scale(1.2);
     opacity: 0;
   }
@@ -1425,7 +1478,7 @@ footer {
   }
 
   100% {
-    filter: blur(7px);
+    filter: blur(3px);
     transform: translateY(-80px) scale(1.2);
     opacity: 0;
   }

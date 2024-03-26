@@ -46,4 +46,5 @@ const BottomSlider = () => {
   );
 };
 
+
 export default BottomSlider;
