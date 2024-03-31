@@ -356,6 +356,10 @@ h6 {
   position: relative;
   width: 100%;
   height: 100%;
+  background-image: url(./Assets//Images/monkey-group.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .monkey img {
@@ -1538,3 +1542,52 @@ footer {
 .under-symbol {
   font-size: 30px;
 }
+
+
+/* ============= */
+
+.eyes {
+  width: 60%;
+  height: 100px;
+  display: flex;
+  background-color: transparent;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  column-gap: 20px;
+  /* background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(./Assets/Images/monkey-group.png); */
+  
+}
+
+.eye-container{
+  position: relative;
+  width: 30%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 40%;
+  top: 20%;
+  background-color: #CBA5E9;
+}
+
+.eye {
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+  /* background-color: #fff; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pupil {
+  width: 10px;
+  height: 10px;
+  border-radius: 101px;
+  background-color: #000;
+}
+

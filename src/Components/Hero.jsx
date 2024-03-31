@@ -88,24 +88,31 @@ const Hero = () => {
   }, [innerHeight]);
 
   // ============
+  const pupilsRef = useRef([]);
+
+  // Function to add elements to the ref array
+  const addToRefs = (el) => {
+    if (el && !pupilsRef.current.includes(el)) {
+      pupilsRef.current.push(el);
+    }
+  };
+
   useEffect(() => {
     const handleMouseMove = (e) => {
-      const pupils = document.querySelectorAll('.eyess .eyes');
-
-      pupils.forEach((pupil) => {
+      pupilsRef.current.forEach((pupil) => {
         const rect = pupil.getBoundingClientRect();
-        const x = (e.pageX - rect.left) / 30 + 'px';
-        const y = (e.pageY - rect.top) / 30 + 'px';
-        pupil.style.transform = 'translate3d(' + x + ',' + y + ', 0px)';
+        const x = (e.pageX - rect.left - window.scrollX) / 50;
+        const y = (e.pageY - rect.top - window.scrollY) / 50;
+        pupil.style.transform = `translate3d(${x}px, ${y}px, 0)`;
       });
     };
 
     window.addEventListener('mousemove', handleMouseMove);
 
-    return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-    };
+    // Cleanup function to remove the event listener
+    return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
+
 
   useEffect(() => {
     const tl = gsap.timeline();
@@ -192,19 +199,23 @@ const Hero = () => {
               <div className="row my-4">
                 <div className="col-md-5">
                   <div className="monkey">
-                    <img src={Monkey} alt="monkey-img" className='img-fluid' />
-                    <span className='eyee'>
-                      <div className="eyess left-eye">
-                        <div className="mob-eye"></div>
-                        <div className="eyes" id='eye'></div>
-                      </div>
-                      <div className="eyess right-eye">
-                        <div className="mob-eye"></div>
-                        <div className="eyes"></div>
-                      </div>
-                    </span>
+                    {/* <img src={Monkey} alt="monkey-img" className='img-fluid' /> */}
+                  <div className="eye-container">
+                  <div class="eyes">
+                    <div class="eye">
+                      <div class="pupil" ref={addToRefs}></div>
+                    </div>
+                    <div class="eye">
+                      <div class="pupil" ref={addToRefs}></div>
+                    </div>
+                  </div>
+                  </div>
 
                   </div>
+                 
+
+                  
+                  {/* ================= */}
                 </div>
                 <div className="col-md-7">
                   <p className='about-text'>
