@@ -3,8 +3,6 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Projects from './Projects-data'
 import { Link } from 'react-router-dom'
-
-
 import Svg from '../Assets/Images/vinith-svg.png'
 import Coffee from '../Assets/Images/cup-coffe.svg'
 import MainImg from '../Assets/Images/main-img.png'
@@ -24,7 +22,8 @@ import arrow from '../Assets/Images/arrwo.svg'
 import Torquee from './Torquee';
 import BottomSlider from './Bottomslider'
 import smoke from '../Assets/Images/smoke.png'
-
+import AOS from 'aos'
+import 'aos/dist/aos.css';
 
 const Hero = () => {
   const zoomInRef = useRef(null);
@@ -34,7 +33,9 @@ const Hero = () => {
   const underRef = useRef(null)
   const { innerHeight } = window;
 
-
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
 
 
@@ -151,7 +152,7 @@ const Hero = () => {
                 <h3>Hey, It’s <span><img src={Svg} alt="svg" /> Vinith </span> <br />
                   Front end Developer</h3>
 
-                <p className='desc-main' ref={descRef}>I'm all about jamming out with code to create funky, interactive experiences. When I'm not busting out cool stuff, I'm chatting and scribbling about these far- <br />out projects. <span className="coffee-anim">
+                <p className='desc-main' data-aos='zoom-in' data-aos-delay='100' ref={descRef}>I'm all about jamming out with code to create funky, interactive experiences. When I'm not busting out cool stuff, I'm chatting and scribbling about these far- <br />out projects. <span className="coffee-anim">
                   <div class="cup-wrap">
                     <div class="cup">
                       {/* <img src={cup} alt="cup"  /> */}
@@ -192,36 +193,40 @@ const Hero = () => {
             <div className="container">
               <div className="section-titl-right my-3">
                 <div className="sec-titl">
-                  <h2>About</h2>
-                  <span><img src={sectionsvg} alt="section-img" className='img-fluid' /></span>
+                  <h2 data-aos='fade-right' data-aos-delay='100'>About</h2>
+                  <span data-aos='fade-left' data-aos-delay='300'><img src={sectionsvg} alt="section-img" className='img-fluid' /></span>
                 </div>
               </div>
               <div className="row my-4">
                 <div className="col-md-5">
                   <div className="monkey">
                     {/* <img src={Monkey} alt="monkey-img" className='img-fluid' /> */}
-                  <div className="eye-container">
-                  <div class="eyes">
-                    <div class="eye">
-                      <div class="pupil" ref={addToRefs}></div>
+                    <div className="eye-container">
+                      <div class="eyes">
+                        <div class="eye">
+                          <div class="pupil" ref={addToRefs}></div>
+                        </div>
+                        <div class="eye">
+                          <div class="pupil" ref={addToRefs}></div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="eye">
-                      <div class="pupil" ref={addToRefs}></div>
-                    </div>
-                  </div>
-                  </div>
 
                   </div>
-                 
 
-                  
+
+
                   {/* ================= */}
                 </div>
                 <div className="col-md-7">
                   <p className='about-text'>
                     <span>
-                      I'm  a frontend web developer fueled by a passion for crafting funky and interactive digital experiences. I thrive on translating ideas into captivating visuals and seamless user interactions using a blend of HTML, CSS, and JavaScript wizardry.
-                    </span>  My goal? To sprinkle a touch of excitement and creativity into every project, whether it's through snazzy animations, innovative interfaces, or out-of-the-box design concepts.  When I'm not coding up a storm, I'm often found discussing and brainstorming about these far-out projects. Sharing insights and bouncing ideas with like-minded enthusiasts fuels my creativity and keeps me inspired.
+                      <span data-aos='fade-bottom' data-aos-delay='100'>I'm  a frontend web developer fueled by a passion for crafting funky and interactive digital experiences.</span>
+                      <span data-aos='fade-bottom' data-aos-delay='400'>I thrive on translating ideas into captivating visuals and seamless user interactions using a blend of HTML, CSS, and JavaScript wizardry.</span>
+                    </span>
+                    <span data-aos='fade-bottom' data-aos-delay='800'> My goal? To sprinkle a touch of excitement and creativity into every project, whether it's through snazzy animations, innovative interfaces, or out-of-the-box design concepts.</span>
+                    <span data-aos='fade-bottom' data-aos-delay='1200'> When I'm not coding up a storm, I'm often found discussing and brainstorming about these far-out projects.</span>
+                    <span data-aos='fade-bottom' data-aos-delay='1600'>Sharing insights and bouncing ideas with like-minded enthusiasts fuels my creativity and keeps me inspired.</span>
                   </p>
                 </div>
               </div>
@@ -231,8 +236,8 @@ const Hero = () => {
             <div className="container">
               <div className="section-titl-left my-3">
                 <div className="sec-titl project-titl">
-                  <h2>Work</h2>
-                  <span><img src={sectionsvg} alt="section-img" className='img-fluid' /></span>
+                  <h2 data-aos='fade-right' data-aos-delay='100'>Work</h2>
+                  <span data-aos='fade-left' data-aos-delay='300'><img src={sectionsvg} alt="section-img" className='img-fluid' /></span>
                 </div>
               </div>
               {
@@ -243,10 +248,10 @@ const Hero = () => {
                     </div>
                     <div className="col-md-7">
                       <div className="second-title">
-                        <h2>{projectdata.Name}</h2>
-                        <p className='work-desc'>
+                        <h2 data-aos='fade-right' data-aos-delay='100'>{projectdata.Name}</h2>
+                        <p className='work-desc' data-aos='zoom-in' data-aos-delay='300'>
                           {projectdata.desc} <br />
-                          <button className='know-more-btn'><Link to={projectdata.links} className='links-tags'>Know More</Link></button>
+                          <button className='know-more-btn mt-2'><Link to={projectdata.links} className='links-tags'>Know More</Link></button>
                         </p>
 
                       </div>

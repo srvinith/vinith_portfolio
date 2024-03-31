@@ -29,8 +29,10 @@ body {
   min-height: 100vh;
   color: #fff !important;
   cursor: url('./Assets/Images/cursor-svg.svg'), auto !important;
+}
 
-
+body::-webkit-scrollbar {
+  display: none;
 }
 
 .custom-cursor {
@@ -42,7 +44,7 @@ body::after {
   width: 90%;
   border-left: 1px solid rgba(255, 255, 255, 0.22);
   border-right: 1px solid rgba(255, 255, 255, 0.22);
-  height: 1000vh;
+  height: 1250vh;
   content: '';
   position: absolute;
   top: 0;
@@ -56,7 +58,7 @@ body::before {
   width: 30%;
   border-left: 1px solid rgba(255, 255, 255, 0.22);
   border-right: 1px solid rgba(255, 255, 255, 0.22);
-  height: 1000vh;
+  height: 1250vh;
   content: '';
   position: absolute;
   top: 0;
@@ -1147,7 +1149,8 @@ footer {
   body::before {
     height: 500vh;
   }
-  .new-con{
+
+  .new-con {
     height: 50vh;
   }
 
@@ -1296,7 +1299,7 @@ footer {
     height: 500vh;
   }
 
-  .new-con{
+  .new-con {
     height: 50vh;
   }
 
@@ -1559,10 +1562,10 @@ footer {
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url(./Assets/Images/monkey-group.png); */
-  
+
 }
 
-.eye-container{
+.eye-container {
   position: relative;
   width: 30%;
   height: fit-content;
@@ -1590,4 +1593,3 @@ footer {
   border-radius: 101px;
   background-color: #000;
 }
-
