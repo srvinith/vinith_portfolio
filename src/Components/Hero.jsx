@@ -30,6 +30,7 @@ const Hero = () => {
   const zoomInRef = useRef(null);
   const imageRef = useRef(null);
   const scrollRef = useRef(null);
+  const descRef = useRef(null);
   const underRef = useRef(null)
   const { innerHeight } = window;
 
@@ -56,6 +57,8 @@ const Hero = () => {
   }, [innerHeight]);
 
 
+
+
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -72,10 +75,12 @@ const Hero = () => {
         onEnter: () => {
           gsap.set(scrollRef.current, { display: 'none' });
           gsap.set(underRef.current, { display: 'none' });
+          gsap.set(descRef.current, { display: 'block' });
         },
         onLeaveBack: () => {
           gsap.set(scrollRef.current, { display: 'block' });
           gsap.set(underRef.current, { display: 'block' });
+          gsap.set(descRef.current, { display: 'none' });
 
         }
       },
@@ -132,14 +137,14 @@ const Hero = () => {
               <button className='scrollbutton'>Scroll Down <img className='down-arrow-img' src={arrow} alt="" /></button>
             </div>
             <div className="main-img" >
-              <img src={MainImg} alt="" ref={imageRef} />
+              <img src={MainImg} alt="monitor-img" ref={imageRef} />
             </div>
             <div className="text-main">
               <div className="inner-con" ref={zoomInRef} >
                 <h3>Hey, It’s <span><img src={Svg} alt="svg" /> Vinith </span> <br />
                   Front end Developer</h3>
 
-                <p >I'm all about jamming out with code to create funky, interactive experiences. When I'm not busting out cool stuff, I'm chatting and scribbling about these far- <br />out projects. <span className="coffee-anim">
+                <p className='desc-main' ref={descRef}>I'm all about jamming out with code to create funky, interactive experiences. When I'm not busting out cool stuff, I'm chatting and scribbling about these far- <br />out projects. <span className="coffee-anim">
                   <div class="cup-wrap">
                     <div class="cup">
                       {/* <img src={cup} alt="cup"  /> */}
@@ -159,6 +164,7 @@ const Hero = () => {
               </div>
             </div>
           </div>
+
           {/* === mobile hero section===================== */}
 
           <div className="mobile-hero">
@@ -167,7 +173,7 @@ const Hero = () => {
                 Front end Developer</h3>
 
               <p className='main-p'>I'm all about jamming out with code to create funky, interactive experiences. When I'm not busting out cool stuff, I'm chatting and scribbling about these far- out projects. <span className="coffee-anim">
-                <img src={Coffee} alt="" className='coffee' />
+                <img src={Coffee} alt="coffee-cup" className='coffee' />
               </span></p>
             </div>
           </div>
@@ -180,14 +186,13 @@ const Hero = () => {
               <div className="section-titl-right my-3">
                 <div className="sec-titl">
                   <h2>About</h2>
-                  <span><img src={sectionsvg} alt="" className='img-fluid' /></span>
+                  <span><img src={sectionsvg} alt="section-img" className='img-fluid' /></span>
                 </div>
-
               </div>
               <div className="row my-4">
                 <div className="col-md-5">
                   <div className="monkey">
-                    <img src={Monkey} alt="" className='img-fluid' />
+                    <img src={Monkey} alt="monkey-img" className='img-fluid' />
                     <span className='eyee'>
                       <div className="eyess left-eye">
                         <div className="mob-eye"></div>
@@ -202,7 +207,6 @@ const Hero = () => {
                   </div>
                 </div>
                 <div className="col-md-7">
-
                   <p className='about-text'>
                     <span>
                       I'm  a frontend web developer fueled by a passion for crafting funky and interactive digital experiences. I thrive on translating ideas into captivating visuals and seamless user interactions using a blend of HTML, CSS, and JavaScript wizardry.
@@ -217,7 +221,7 @@ const Hero = () => {
               <div className="section-titl-left my-3">
                 <div className="sec-titl project-titl">
                   <h2>Work</h2>
-                  <span><img src={sectionsvg} alt="" className='img-fluid' /></span>
+                  <span><img src={sectionsvg} alt="section-img" className='img-fluid' /></span>
                 </div>
               </div>
               {
@@ -249,8 +253,8 @@ const Hero = () => {
           </div>
           <div className="container">
             <div className="chain-con">
-              <img src={chainLeft} alt="" className='img-fluid img-1' />
-              <img src={chainRight} alt="" className='img-fluid img-2' />
+              <img src={chainLeft} alt="chain-img" className='img-fluid img-1' />
+              <img src={chainRight} alt="chain-img" className='img-fluid img-2' />
             </div>
             <div className="work-box-con">
               <div className="scrow">
@@ -281,7 +285,7 @@ const Hero = () => {
         </div>
 
         <div className="about-con my-5 py-4">
-          <div className="container">
+          <div className="container new-con">
             <center>
               <h3 className='think-white'>Do You think There is Lot of space in the skills set box ?</h3>
             </center>
@@ -293,7 +297,7 @@ const Hero = () => {
           <div className="section-titl-right my-3" id='contact'>
             <div className="sec-titl">
               <h2>Contact</h2>
-              <span><img src={sectionsvg} alt="" className='img-fluid' /></span>
+              <span><img src={sectionsvg} alt="section-img" className='img-fluid' /></span>
             </div>
           </div>
 
@@ -307,14 +311,14 @@ const Hero = () => {
 
           <div className="container">
             <div className="social-link">
-              <Link to="https://www.linkedin.com/in/vinith-r-67a62a17a/" className="linked">
-                <img src={Linkedin} alt="" /><span>Linked In</span><span><img className='arrow-right' src={arrow} alt="arrow-img" /></span>
+              <Link to="https://www.linkedin.com/in/vinith-r-67a62a17a/" className="linked soc-link">
+                <img src={Linkedin} alt="linkedin" /><span>Linked In</span><span><img className='arrow-right' src={arrow} alt="arrow-img" /></span>
               </Link>
-              <Link to='mailto:srvinith6@gmail.com' target="_blank" className="mail">
-                <img src={Mail} alt="" /><span>Email</span><span><img className='arrow-right' src={arrow} alt="arrow-img" /></span>
+              <Link to='mailto:srvinith6@gmail.com' target="_blank" className="mail soc-link">
+                <img src={Mail} alt="email" /><span>Email</span><span><img className='arrow-right' src={arrow} alt="arrow-img" /></span>
               </Link>
-              <Link to="https://github.com/srvinith" target="_blank" className="github">
-                <img src={Github} alt="" /><span>Github </span><span><img className='arrow-right' src={arrow} alt="arrow-img" /></span>
+              <Link to="https://github.com/srvinith" target="_blank" className="github soc-link">
+                <img src={Github} alt="github" /><span>Github </span><span><img className='arrow-right' src={arrow} alt="arrow-img" /></span>
               </Link>
             </div>
           </div>

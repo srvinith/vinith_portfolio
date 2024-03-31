@@ -56,7 +56,7 @@ const Header = () => {
           </Nav>
           
         </Navbar.Collapse>
-        <a className='resume-btn' href="https://drive.google.com/file/d/1zH1M1VfRbA4y6fapbc24PYw4uliK8_Zx/view?usp=drivesdk" download target='_blank'>Resume</a>
+        <a className='resume-btn' href="https://drive.google.com/file/d/1ohHh3WuS7SwAJFAdc_cBPw6uqbDxLG70/view?usp=drive_web" download target='_blank'>Resume</a>
       </Container>
     </Navbar>
 

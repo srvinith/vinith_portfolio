@@ -1,24 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import '../Assets/Css/Torquee.css'
 import '../App.css'
 import Tag from '../Assets/Images/tag.svg'
 
 const BottomSlider = () => {
-  const [position, setPosition] = useState(0);
-
-  useEffect(() => {
-    const sliderInterval = setInterval(() => {
-      setPosition((prevPosition) => (prevPosition <= -100 ? 0 : prevPosition - 1));
-    }, 160); // Adjust the interval based on your preference
-
-    return () => {
-      clearInterval(sliderInterval);
-    };
-  }, []);
+ 
 
   return (
     <div className="looping-slider">
-      <div className="looping-content" style={{ transform: `translateX(${position}%)` }}>
+      <marquee className="looping-content">
         <span className='bellow-line'><img src={Tag} alt="" className='img-fluid' />
           <span className='text-stocks'> Vinith </span>
           <span className='text-opac'> Frontend </span>
@@ -41,7 +31,7 @@ const BottomSlider = () => {
         </span>
 
 
-      </div>
+      </marquee>
     </div>
   );
 };
