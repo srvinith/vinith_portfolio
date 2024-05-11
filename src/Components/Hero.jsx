@@ -102,7 +102,7 @@ const Hero = () => {
     const handleMouseMove = (e) => {
       pupilsRef.current.forEach((pupil) => {
         const rect = pupil.getBoundingClientRect();
-        const x = (e.pageX - rect.left - window.scrollX) / 50;
+        const x = (e.pageX - rect.left - window.scrollX) / 100;
         const y = (e.pageY - rect.top - window.scrollY) / 50;
         pupil.style.transform = `translate3d(${x}px, ${y}px, 0)`;
       });
@@ -152,23 +152,23 @@ const Hero = () => {
                 <h3>Hey, It’s <span><img src={Svg} alt="svg" /> Vinith </span> <br />
                   Front end Developer</h3>
 
-                <p className='desc-main' data-aos='zoom-in' data-aos-delay='100' ref={descRef}>I'm all about jamming out with code to create funky, interactive experiences. When I'm not busting out cool stuff, I'm chatting and scribbling about these far- <br />out projects. <span className="coffee-anim">
-                  <div class="cup-wrap">
-                    <div class="cup">
-                      {/* <img src={cup} alt="cup"  /> */}
+                <p className='desc-main' data-aos='zoom-in' data-aos-delay='100' ref={descRef}>I'm all about jamming out with code to create funky, interactive experiences. When I'm not busting out cool stuff, I'm chatting and scribbling about these far- <br />out projects.
+                  <span className="coffee-anim">
+                    <div class="cup-wrap">
+                      <div class="cup">
+                        {/* <img src={cup} alt="cup"  /> */}
+                      </div>
+                      <div class="smoke-wrap">
+                        <img class="smoke" src={smoke} alt="smoke" />
+                      </div>
+                      <div class="smoke-wrap">
+                        <img class="smoke2" src={smoke} alt="smoke" />
+                      </div>
+                      <div class="smoke-wrap">
+                        <img class="smoke3" src={smoke} alt="smoke" />
+                      </div>
                     </div>
-
-                    <div class="smoke-wrap">
-                      <img class="smoke" src={smoke} alt="smoke" />
-                    </div>
-                    <div class="smoke-wrap">
-                      <img class="smoke2" src={smoke} alt="smoke" />
-                    </div>
-                    <div class="smoke-wrap">
-                      <img class="smoke3" src={smoke} alt="smoke" />
-                    </div>
-                  </div>
-                </span></p>
+                  </span></p>
               </div>
             </div>
           </div>

@@ -368,19 +368,20 @@ h6 {
   position: relative;
 }
 
-.monkey span {
+/* .monkey span {
   position: absolute;
   top: 25%;
   left: 44%;
   transform: translate(-50%, -50%);
   width: 70px;
-}
+} */
 
 .eyee {
   display: flex;
   align-items: center;
   width: 70px;
   justify-content: space-between;
+  background-color: red !important;
 }
 
 .eyess {
@@ -401,7 +402,7 @@ h6 {
   top: -140%;
   left: -13px;
   right: -13px;
-  right: 900px;
+  /* right: 900px; */
 }
 
 .monkey {
@@ -583,7 +584,7 @@ h6 {
   }
 
   25% {
-    transform: rotate(5deg);
+    transform: rotate(-5deg);
   }
 
   50% {
@@ -591,7 +592,7 @@ h6 {
   }
 
   75% {
-    transform: rotate(-5deg);
+    transform: rotate(5deg);
   }
 
   100% {
@@ -634,25 +635,26 @@ h6 {
 
 @keyframes box-ani {
   0% {
-    transform: skewX(2deg);
+    transform:translateX(0px) rotateX(0deg);
   }
 
   25% {
-    transform: skewX(0deg);
+    transform:translateX(10px) rotateX(0deg);
   }
 
   50% {
-    transform: skewX(-2deg);
+    transform:translateX(0px) rotateX(0deg);
   }
 
   75% {
-    transform: skewX(0deg);
+    transform:translateX(-10px) rotateX(0deg);
   }
 
   100% {
-    transform: skewX(2deg);
+    transform:translateX(0px) rotateX(0deg);
   }
 }
+
 
 .scrow {
   display: flex;
@@ -1592,4 +1594,33 @@ footer {
   height: 10px;
   border-radius: 101px;
   background-color: #000;
+}
+
+@media screen and (min-width:1025px) and (max-width:1200px){
+.nav-links{
+  font-size: 18px !important;
+}
+.eyes {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #000;
+  transform: translate3d(0, 0, 0);
+  position: absolute;
+  top: 80px;
+  left: 13px;
+  right: -13px;
+  /* right: 900px; */
+}
+.chain-con {
+  width: 75%;
+}
+.main-project-con {
+  height: 50vh;
+  position: sticky;
+  top: 100px;
+}
+body::after,body::before{
+  height: 800vh;
+}
 }
