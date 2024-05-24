@@ -3,6 +3,7 @@ import pscastle from '../Assets/Images/ps-castel.png'
 import foodon from '../Assets/Images/food-on.png'
 import ecom from '../Assets/Images/ecom.png'
 import courtyard from '../Assets/Images/courtyard.png'
+import vmBanner from '../Assets/Images/vm-banner.png'
 const Projects = [
     {
         id: 1,
@@ -42,6 +43,14 @@ const Projects = [
         desc: `highlighting resort amenities with advanced animations and Webflow integration for an engaging user experience. Spearheaded the project from conception to launch, enhancing online visibility and customer
         interaction.(Know `,
         links: 'https://github.com/srvinith/courtyard',
+    },
+    {
+        id: 6,
+        img: vmBanner,
+        Name: 'VM Associates',
+        desc: `highlighting resort amenities with advanced animations and Webflow integration for an engaging user experience. Spearheaded the project from conception to launch, enhancing online visibility and customer
+        interaction.(Know `,
+        links: 'https://vm-associates.pages.dev/',
     },
 
 ]

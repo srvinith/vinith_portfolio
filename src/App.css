@@ -1624,3 +1624,107 @@ body::after,body::before{
   height: 800vh;
 }
 }
+
+@media screen and (min-width:1201px) {
+  .scrow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 79%;
+    margin: 10px auto;
+    z-index: 20;
+    /* animation: ani-scrow 5s infinite; */
+  
+  }
+
+  .new-con {
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .main-project-con{
+    height: 60vh;
+  }
+  body::after,body::before{
+    height: 700vh;
+  }
+}
+
+@media screen and (min-width:769px) and (max-width:1024px) {
+  .nav-links{
+    font-size: 18px !important;
+  }
+  .eyes{
+    margin-top: 30%;
+  }
+  .scrow{
+    width: 78%;
+  }
+}
+
+@media screen and (max-width:768px) and (min-width:481px) {
+  .sec-titl h2{
+    font-size: 30px !important;
+  }
+  .monkey{
+   display: none;
+  }
+  .main-project-con {
+    height: 100vh;
+    position: sticky;
+    top: 10px;
+}
+.work-img{
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+.work-desc{
+  font-size: 14px !important;
+}
+.work-box-con{
+  width: 100%;
+}
+.list-of-skills{
+  font-size: 12px;
+}
+.chain-con{
+  width: 55%;
+}
+.center-diamond span , .center-diamond h3{
+  font-size: 40px !important;
+}
+}
+
+@media  screen and (max-width:480px) {
+  .monkey{
+    display: none;
+  }
+  .nav-mob-slide{
+    height: 100vh !important;
+    background-color: rgba(0, 0, 0, 1);
+    position: relative;
+    left: 0;
+    gap: 100px;
+
+  }
+  .nav-links{
+    font-size: 30px !important;
+    text-align: center;
+  }
+
+  .resume-btn{
+    position: absolute;
+    top: 8px;
+    right: 10px;
+  }
+  
+  .main-project-con{
+    top: 200px;
+    /* height: 60vh; */
+  }
+  
+}

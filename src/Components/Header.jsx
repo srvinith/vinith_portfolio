@@ -2,6 +2,8 @@ import React,{useState,useEffect} from 'react'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { IoIosMenu } from "react-icons/io";
+import { IoMdClose } from "react-icons/io";
 // import Resume from '../Assets/resume/resume_.pdf'
 
 
@@ -36,13 +38,18 @@ const Header = () => {
     // const handleClick = () => setClick(!click)
 
     const closeMenu = () => setClick(false)
-
+    const [expanded, setExpanded] = useState(false);
   return (
     <div className='header-con'  style={{display: visible ? 'block' : 'none' }}>
-         <Navbar expand="lg" className="navs" fixed='top' data-bs-theme="dark" variant='dark'>
+         <Navbar expand="lg" className="navs" fixed='top' data-bs-theme="dark" variant='dark' expanded={expanded}>
       <Container>
         <Navbar.Brand className='logo' href="#"><h1>Vinith</h1></Navbar.Brand>
-        <Navbar.Toggle aria-controls="navbarScroll" />
+        <Navbar.Toggle
+            aria-controls="basic-navbar-nav"
+            onClick={() => setExpanded(!expanded)}
+            className="toggels text-white">
+            {expanded ? <IoMdClose className='nav-icon'/>:<IoIosMenu className='nav-icon'/>}
+          </Navbar.Toggle>
         <Navbar.Collapse id="navbarScroll">
           <Nav
             className="me-auto my-2 mx-4 my-lg-0 nav-mob-slide"
@@ -56,7 +63,7 @@ const Header = () => {
           </Nav>
           
         </Navbar.Collapse>
-        <a className='resume-btn' href="https://drive.google.com/file/d/1ohHh3WuS7SwAJFAdc_cBPw6uqbDxLG70/view?usp=drive_web" download target='_blank'>Resume</a>
+        <a className='resume-btn' href="https://drive.google.com/file/d/13u9mF5UOH6k653GVMxACIZ8TsWtficgc/view" download target='_blank'>Resume</a>
       </Container>
     </Navbar>
 

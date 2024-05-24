@@ -9,7 +9,7 @@ import MainImg from '../Assets/Images/main-img.png'
 import '../Assets/Css/HeroResp.css'
 import miniMonitor from '../Assets/Images/mini-monitor.svg'
 import sectionsvg from '../Assets/Images/section-title-svg.svg'
-import Monkey from '../Assets/Images/monkey-group.png'
+// import Monkey from '../Assets/Images/monkey-group.png'
 import chainLeft from '../Assets/Images/chain-left-group.png'
 import chainRight from '../Assets/Images/chain-right-group.png'
 import scrow from '../Assets/Images/scrow.svg'
@@ -218,7 +218,7 @@ const Hero = () => {
 
                   {/* ================= */}
                 </div>
-                <div className="col-md-7">
+                <div className=" col-sm-12 col-md-7">
                   <p className='about-text'>
                     <span>
                       <span data-aos='fade-bottom' data-aos-delay='100'>I'm  a frontend web developer fueled by a passion for crafting funky and interactive digital experiences.</span>
@@ -348,7 +348,7 @@ const Hero = () => {
         <footer>
           <div className="footer-line">
             <p>Crafted by Ganesh</p>
-            <p>&copy;Copyrights 2023 Registered</p>
+            <p>&copy;Copyrights 2024 Registered</p>
           </div>
           <center>
             <p className='coder'>Coded by</p>
