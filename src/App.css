@@ -1607,7 +1607,7 @@ footer {
   background-color: #000;
   transform: translate3d(0, 0, 0);
   position: absolute;
-  top: 80px;
+  top: 75px;
   left: 13px;
   right: -13px;
   /* right: 900px; */
@@ -1650,6 +1650,15 @@ body::after,body::before{
   }
   body::after,body::before{
     height: 700vh;
+  }
+  .work-box-con{
+    height: 75vh;
+  }
+  .list-of-skills{
+    padding: 50px 0;
+  }
+  .eyes{
+    top:-20px;
   }
 }
 
